@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Bookcase
+
+class BookcaseAdmin(admin.ModelAdmin):
+    search_fields = ['name',]
+
+admin.site.register(Bookcase, BookcaseAdmin)
