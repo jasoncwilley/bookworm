@@ -28,6 +28,8 @@ Bookcases app controls bookcases and what is in them.
 * Book
     * title: The title of the book
     * genre: The genre the book belongs to
+    * date_added: The date the book was added to the shelf
+    * wikipedia_url: The wikipedia entry about this book
     * bookshelf: The shelf the book is on
 
 ### Core
