@@ -32,11 +32,11 @@ Models for Books, Genres, and Authors.
 #### Models
 * Book
     * title: The title of the book
-    * genres: The list of genres for the book
-    * author: The author of the book
-    * date_added: The date the book was added to the shelf
     * wikipedia_url: The wikipedia entry about this book
-    * bookshelf: The shelf the book is
+    * date_added: The date the  book was added to the collection
+    * genres: The list of genres for the book
+    * authors: The authors of the book
+    * bookshelf: The shelf the book is on
 * Author
     * name: The name of the author
 * Genre
