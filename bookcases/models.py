@@ -15,7 +15,7 @@ class Bookshelf(models.Model):
     bookcase = models.ForeignKey('Bookcase')
 
     class Meta:
-        ordering = ['shelf_label', ]
+        ordering = ['shelf_label',]
         verbose_name_plural = 'bookshelves'
 
     def __str__(self):
