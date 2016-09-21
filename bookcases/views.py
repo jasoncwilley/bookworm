@@ -1,9 +1,10 @@
 from django.shortcuts import render
-
+from django.db.models import Count
 from .models import Bookcase
 
+
 def bookcase_list(request):
-    bookcases = Bookcase.objects.prefetch_related('bookshelf_set').all()
+    bookcases = Bookcase.objects.annotate(shelf_count=Count('bookshelf')).all()
 
     context = {
         "bookcases": bookcases,
