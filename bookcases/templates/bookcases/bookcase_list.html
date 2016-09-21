@@ -1,0 +1,19 @@
+ {% extends "core/base.html" %}
+{% block content %}
+    <h2>Bookcases</h2>
+      <div class ="panel-group" id ="accordion" role="tablist">
+         {for bookcase in bookcases%}
+           <div class="panel panel -default" id = "heading-{{bookcase.pk}}">
+            <h4 class= "panel - title">
+              <a class = "collapsed" href= "#collapse - {{bookcase.pk}}">
+{{bookcase.name|title}}
+            </a>
+         </h4>
+       </div>
+    </div>
+        <div id = "collapse-{{bookcase.pk}}" class="panel-collapse collapse">
+
+
+
+
+{% endblock content %}
