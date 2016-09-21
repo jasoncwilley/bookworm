@@ -11,6 +11,10 @@ class Book(models.Model):
     authors = models.ManyToManyField('Author')
     genres = models.ManyToManyField('Genre')
 
+    def get_authors(self):
+        author_names = [author.name for author in self.authors.all()]
+        return ", ".join(author_names)
+
     def __str__(self):
         return self.title
 
