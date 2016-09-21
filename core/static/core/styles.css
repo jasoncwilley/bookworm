@@ -10,6 +10,14 @@ body{
     width: 100%;
 }
 
-.posts-pagination {
-    text-align: center;
+.book-thumbnail {
+    background-color: #eee;
+}
+
+.book-thumbnail .caption {
+    background-color: #fff;
+    margin-top: 4px;
+}
+.book-thumbnail .book-cover {
+    min-height: 240px;
 }

@@ -1,0 +1,28 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    <ol class="breadcrumb">
+        <li>Home</li>
+        <li><a href="{% url 'bookcases:bookcase_list' %}">Bookcases</a></li>
+        <li><a href="{{bookshelf.bookcase.get_absolute_url}}">{{bookshelf.bookcase.name}}</a></li>
+    </ol>
+    <h2>
+        {{bookshelf.shelf_label}}
+    </h2>
+    <p>
+        <em>
+            There are {{bookshelf.book_count}} book{{bookshelf.book_count|pluralize}} on this shelf.
+        </em>
+    </p>
+    {% if books %}
+        <h3>Books</h3>
+        <hr>
+        <div class="row">
+            {% for book in books %}
+                <div class="col-md-4">
+                    {% include "books/_book_thumbnail.html" %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock content %}
