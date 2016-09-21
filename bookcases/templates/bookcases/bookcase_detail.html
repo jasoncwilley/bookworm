@@ -2,6 +2,7 @@
 
 {% block content %}
     <ol class="breadcrumb">
+        <li><a href="{% url 'core:index' %}">Home</a></li>
         <li><a href="{% url 'bookcases:bookcase_list' %}">Bookcases</a></li>
         <li>{{bookcase.name}}</li>
     </ol>
