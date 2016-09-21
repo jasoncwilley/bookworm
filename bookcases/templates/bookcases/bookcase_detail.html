@@ -1,0 +1,27 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="{% url 'bookcases:bookcase_list' %}">Bookcases</a></li>
+        <li>{{bookcase.name}}</li>
+    </ol>
+    <h2>
+        {{bookcase.name}}
+    </h2>
+    
+    <ul class="list-group">
+        {% for bookshelf in bookshelves %}
+            <li class="list-group-item">
+                <div class="pull-right">
+                    <span class="badge">
+                        {{bookshelf.book_count}}
+                        book{{bookshelf.book_count|pluralize}}
+                    </span>
+                </div>
+                <a href="{{bookshelf.get_absolute_url}}">
+                    {{bookshelf.shelf_label}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
